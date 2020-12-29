@@ -40,7 +40,6 @@ const Didact = {
   render
 };
 
-/** @jsx Didact.createElement */
 const element = (
 	<div>123</div>
 )
