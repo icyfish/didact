@@ -5,4 +5,4 @@
 
 ### TODO
 
-[ ] add types, remove @types/react
+[] add types, remove @types/react

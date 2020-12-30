@@ -136,7 +136,8 @@ var __assign = this && this.__assign || function () {
   };
 
   return __assign.apply(this, arguments);
-};
+}; // type 可能是 React 组件，也可能是普通 HTML 标签
+
 
 function createElement(type, props) {
   var children = [];
@@ -145,6 +146,7 @@ function createElement(type, props) {
     children[_i - 2] = arguments[_i];
   }
 
+  console.log(children);
   return {
     type: type,
     props: __assign(__assign({}, props), {
@@ -184,13 +186,11 @@ function render(element, container) {
 var Didact = {
   createElement: createElement,
   render: render
-};
-var element = Didact.createElement("div", null, "123"); // const element = Didact.createElement(
-//   "h1",
-//   { style: { color: "red" } },
-//   "hello"
-// );
+}; // function CustomEle() {
+//   return <div>234</div>
+// }
 
+var element = Didact.createElement("div", null, Didact.createElement("h3", null, "123"));
 var container = document.getElementById("root");
 Didact.render(element, container);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53563" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65203" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
